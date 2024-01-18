@@ -1,0 +1,15 @@
+:root {
+  font-family: "Playfair Display", sans-serif;
+  line-height: 1.5;
+  font-weight: 600;
+
+  --main-bg-color: #010400;
+  --secondary-bg-color: #dad2d8;
+  --tertiary-bg-color: #5db7de;
+}
+
+* {
+  margin: 0;
+  overflow-x: hidden;
+  /* border: 1px solid red; */
+}
