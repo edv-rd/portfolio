@@ -6,6 +6,8 @@
   --main-bg-color: #010400;
   --secondary-bg-color: #dad2d8;
   --tertiary-bg-color: #5db7de;
+
+  scroll-behavior: smooth;
 }
 
 * {
