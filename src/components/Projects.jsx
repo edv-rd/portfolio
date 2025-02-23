@@ -13,18 +13,25 @@ const projectArray = [
   },
 ];
 
+const StyledProjectsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+`;
+
 const StyledProjects = styled.div``;
 
 const Projects = () => {
   return (
-    <>
-      Here are some things I made:
+    <StyledProjectsWrapper>
+      <h1>Here are some things I made:</h1>
       {projectArray.map((project) => (
         <StyledProjects key={project.name}>
           {project.name} - {project.info} - <a href={project.url}>Try it!</a>
         </StyledProjects>
       ))}
-    </>
+    </StyledProjectsWrapper>
   );
 };
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledInfoText = styled.p``;
+const StyledInfoText = styled.h1``;
 
 const Info = () => {
   return (

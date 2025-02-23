@@ -4,6 +4,14 @@ import Logo from "./components/Logo";
 import Info from "./components/Info";
 import Projects from "./components/Projects";
 import Widget from "./components/Widget";
+import "./App.css";
+
+const FlexContainer = styled.div`
+  display: flex;
+  padding: 10px;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+`;
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -12,60 +20,64 @@ const StyledWrapper = styled.div`
   width: 100vw;
 `;
 
-const StyledHeroDiv = styled.div`
-  display: flex;
-  background-color: yellow;
+const StyledHeroDiv = styled(FlexContainer)`
   flex: 4;
-  padding: 10px;
+  //background-color: yellow;
   justify-content: center;
   align-items: center;
 `;
 
-const StyledEffectBox = styled.div`
-  background-color: orange;
-`;
-
-const StyledContentDiv = styled.div`
-  display: flex;
+const StyledContentDiv = styled(FlexContainer)`
   flex-direction: column;
-  background-color: red;
+  //background-color: red;
   flex: 5;
+  padding: 0;
 `;
 
-const StyledLogoDiv = styled.div`
+const ContentSection = styled(FlexContainer)`
+  justify-content: center;
+  align-items: center;
+`;
+
+const StyledLogoDiv = styled(ContentSection)`
   flex: 3;
-  background-color: blue;
-  padding: 10px;
-  justify-items: center;
-  align-content: center;
+  //background-color: blue;
 `;
 
-const StyledInfoDiv = styled.div`
+const StyledInfoDiv = styled(ContentSection)`
   flex: 6;
-  background-color: green;
-  padding: 10px;
-  justify-items: center;
-  align-content: center;
+  //background-color: green;
 `;
 
 const StyledInfoBox = styled.div`
-  background-color: pink;
+  //background-color: pink;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 `;
 
-const StyledWidgetDiv = styled.div`
+const InfoBoxElement = styled.div`
+  flex: 2;
+`;
+
+const StyledInfoElement = styled(InfoBoxElement)`
+  //background-color: white;
+`;
+
+const StyledProjectsElement = styled(InfoBoxElement)`
+  //background-color: brown;
+`;
+
+const StyledWidgetDiv = styled(ContentSection)`
   flex: 1;
-  background-color: purple;
+  //background-color: purple;
 `;
-
-import "./App.css";
 
 function App() {
   return (
     <StyledWrapper>
       <StyledHeroDiv>
-        <StyledEffectBox>
-          <Effect />
-        </StyledEffectBox>
+        <Effect />
       </StyledHeroDiv>
       <StyledContentDiv>
         <StyledLogoDiv>
@@ -73,8 +85,12 @@ function App() {
         </StyledLogoDiv>
         <StyledInfoDiv>
           <StyledInfoBox>
-            <Info />
-            <Projects />
+            <StyledInfoElement>
+              <Info />
+            </StyledInfoElement>
+            <StyledProjectsElement>
+              <Projects />
+            </StyledProjectsElement>
           </StyledInfoBox>
         </StyledInfoDiv>
         <StyledWidgetDiv>
